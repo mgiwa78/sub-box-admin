@@ -1,0 +1,166 @@
+.addCategory {
+  padding: 50px;
+
+  width: 100%;
+}
+
+.addCategoryTitleContainer {
+  display: flex;
+  margin-left: 55px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.addCategoryAddButton {
+  width: 80px;
+  border: none;
+  padding: 5px;
+  background-color: teal;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+
+.addCategoryContainer {
+  display: flex;
+  margin-top: 20px;
+}
+
+.addCategoryShow {
+  flex: 1;
+  padding: 20px;
+}
+
+.addCategory {
+  border: 1px solid#d4d4d4;
+  flex: 2;
+  padding: 20px;
+}
+.addCategoryflx {
+  width: 100%;
+  padding: 20px;
+}
+
+.addCategoryShowTop {
+  display: flex;
+  align-items: center;
+}
+
+.addCategoryShowImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.addCategoryShowTopTitle {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.addCategoryShowaddCategoryname {
+  font-weight: 600;
+}
+
+.addCategoryShowaddCategoryTitle {
+  font-weight: 300;
+}
+
+.addCategoryShowBottom {
+  margin-top: 20px;
+}
+
+.addCategoryShowTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(175, 170, 170);
+}
+
+.addCategoryShowInfo {
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+  color: #444;
+}
+
+.addCategoryShowIcon {
+  font-size: 16px !important;
+}
+
+.addCategoryShowInfoTitle {
+  margin-left: 10px;
+}
+.addCategoryFormBody {
+  display: flex;
+  padding: 0 40px;
+  justify-content: space-between;
+  width: 45%;
+}
+.addCategoryTitle {
+  font-size: 29px;
+  font-weight: 600;
+}
+
+.addCategoryForm {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.addCategoryItem {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.addCategoryItem > label {
+  margin-bottom: 5px;
+  font-size: 19px;
+}
+.addCategoryItem > input {
+  font-size: 19px;
+  margin-bottom: 20px;
+  padding: 5px 15px;
+}
+.addCategoryItem > select > option {
+  font-size: 19px;
+  margin-bottom: 20px;
+}
+.addCategoryItem > select {
+  font-size: 19px;
+  margin-bottom: 20px;
+}
+
+.addCategoryInput {
+  border: none;
+  width: 250px;
+  height: 30px;
+  border-bottom: 1px solid gray;
+}
+
+.addCategoryRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.addCategoryFormBody {
+}
+
+.addCategoryUpload {
+  display: flex;
+  align-items: center;
+}
+
+.addCategoryImg {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.addCategoryIcon {
+  cursor: pointer;
+}

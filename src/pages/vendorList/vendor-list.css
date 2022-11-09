@@ -1,0 +1,34 @@
+.vendorListvendor {
+  display: flex;
+  align-items: center;
+}
+
+.vendorListImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.vendorTable {
+  border-radius: 0px !important;
+}
+.vendorListEdit {
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  background-color: #3bb077;
+  color: white;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.vendorListDelete {
+  color: red;
+  cursor: pointer;
+}
+
+.vendorList {
+  width: 100%;
+  height: 70vh;
+}

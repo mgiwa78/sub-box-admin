@@ -1,0 +1,175 @@
+.addVendor {
+  padding: 50px;
+  width: 100%;
+}
+
+.addVendorTitleContainer {
+  display: flex;
+  margin-left: 55px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.addVendorAddButton {
+  width: 80px;
+  border: none;
+  padding: 5px;
+  background-color: teal;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+
+.addVendorContainer {
+  display: flex;
+  margin-top: 20px;
+}
+
+.addVendorShow {
+  flex: 1;
+  padding: 20px;
+}
+
+.addVendor {
+  flex: 2;
+  padding: 20px;
+  border: 1px solid#d4d4d4;
+}
+
+.addVendorShowTop {
+  display: flex;
+  align-items: center;
+}
+
+.addVendorShowImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.addVendorShowTopTitle {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.addVendorShowaddVendorname {
+  font-weight: 600;
+}
+
+.addVendorShowaddVendorTitle {
+  font-weight: 300;
+}
+
+.addVendorShowBottom {
+  margin-top: 20px;
+}
+
+.addVendorShowTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(175, 170, 170);
+}
+
+.addVendorShowInfo {
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+  color: #444;
+}
+
+.addVendorShowIcon {
+  font-size: 16px !important;
+}
+
+.addVendorShowInfoTitle {
+  margin-left: 10px;
+}
+
+.addVendorFormBody {
+  display: flex;
+  padding: 0 40px;
+  width: 45%;
+  justify-content: space-around;
+}
+.addVendorTitle {
+  font-size: 29px;
+  font-weight: 600;
+}
+
+.addVendorForm {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.addVendorItem {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.addVendorItem > label {
+  margin-bottom: 5px;
+  font-size: 19px;
+  color: gray;
+  font-weight: 600;
+}
+.addVendorItem > input {
+  font-size: 19px;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+}
+.addVendorItem > select > option {
+  font-size: 19px;
+  margin-bottom: 20px;
+}
+.addVendorItemSelect {
+  font-size: 22px;
+  margin-bottom: 20px;
+  padding: 10px 10px;
+}
+
+.addVendorInput {
+  border: none;
+  width: 250px;
+  height: 30px;
+  border-bottom: 1px solid gray;
+}
+
+.addVendorRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.addVendorUpload {
+  display: flex;
+  align-items: center;
+}
+
+.addVendorImg {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.addVendorIcon {
+  cursor: pointer;
+}
+
+.addVendorButton {
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  background-color: darkblue;
+  color: white;
+  font-weight: 600;
+}

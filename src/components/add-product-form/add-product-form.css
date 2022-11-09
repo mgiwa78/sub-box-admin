@@ -1,0 +1,169 @@
+.addProduct {
+  padding: 50px;
+
+  width: 100%;
+}
+
+.addProductTitleContainer {
+  display: flex;
+  margin-left: 55px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.addProductAddButton {
+  width: 80px;
+  border: none;
+  padding: 5px;
+  background-color: teal;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+
+.addProductContainer {
+  display: flex;
+  margin-top: 20px;
+}
+
+.addProductShow {
+  flex: 1;
+  padding: 20px;
+}
+
+.addProduct {
+  border: 1px solid#d4d4d4;
+  flex: 2;
+  padding: 20px;
+}
+.addProductflx {
+  width: 100%;
+  padding: 20px;
+}
+
+.addProductShowTop {
+  display: flex;
+  align-items: center;
+}
+
+.addProductShowImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.addProductShowTopTitle {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.addProductShowaddProductname {
+  font-weight: 600;
+}
+
+.addProductShowaddProductTitle {
+  font-weight: 300;
+}
+
+.addProductShowBottom {
+  margin-top: 20px;
+}
+
+.addProductShowTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(175, 170, 170);
+}
+
+.addProductShowInfo {
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+  color: #444;
+}
+
+.addProductShowIcon {
+  font-size: 16px !important;
+}
+
+.addProductShowInfoTitle {
+  margin-left: 10px;
+}
+.addProductFormBody {
+  display: flex;
+  padding: 0 40px;
+  justify-content: space-between;
+  width: 55%;
+  align-content: flex-start;
+}
+.addProductTitle {
+  font-size: 29px;
+  font-weight: 600;
+}
+
+.addProductForm {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.addProductItem {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.addProductItem > label {
+  margin-bottom: 5px;
+  font-size: 19px;
+}
+.addProductItem > input {
+  font-size: 19px;
+  margin-bottom: 20px;
+}
+.addProductItem > select > option {
+  font-size: 19px;
+  margin-bottom: 20px;
+}
+.addProductItem > select {
+  font-size: 19px;
+  margin-bottom: 20px;
+}
+
+.addProductInput {
+  border: none;
+  width: 250px;
+  height: 30px;
+  border-bottom: 1px solid gray;
+}
+
+.addProductRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.addProductFormBody {
+}
+
+.addProductUpload {
+  display: flex;
+  align-items: center;
+}
+
+.addProductImg {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.addProductIcon {
+  cursor: pointer;
+}
