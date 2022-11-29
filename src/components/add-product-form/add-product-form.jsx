@@ -19,20 +19,20 @@ import {
 import { useEffect, useState } from "react";
 import Button from "../button/button";
 import { convertImageTobBase64 } from "../../utils/imageutils";
+import { Form } from "react-bootstrap";
 
 export const AddProductForm = () => {
   const [productCategories, setProductCategories] = useState([]);
   const [productVendors, setProductVendors] = useState([]);
 
   useEffect(() => {
-    if (productCategories.length !== 0) return console.log(productCategories);
+    if (productCategories.length !== 0) return;
 
     const productCategoriesData = async function name(params) {
       try {
         const categoriesData = await FetchAllCategories();
         const vendorsData = await FetchAllVendors();
 
-        console.log("noe");
         setProductCategories(categoriesData);
         setProductVendors(vendorsData);
       } catch (error) {}
@@ -41,15 +41,17 @@ export const AddProductForm = () => {
   }, [productCategories]);
 
   const DefformFields = {
-    productName: "dd",
+    productName: "",
     productCategory: "",
-    productDescription: "ddd",
-    productUnits: "2",
+    productDescription: "",
+    productUnits: "",
     vendorName: "",
-    productVendorID: "dd",
-    productPrice: "33",
-    productTags: "dd",
-    productImage: "dd",
+    productVendorID: "",
+    productPrice: "",
+    productTags: "",
+    productImage: "",
+    productCategoryName: "",
+    subscriptionTypes: "",
   };
 
   const [formFields, setFormFields] = useState(DefformFields);
@@ -65,7 +67,9 @@ export const AddProductForm = () => {
     vendorName,
     productVendorID,
     productVendorName,
+    productCategoryName,
     productImage,
+    subscriptionTypes,
   } = formFields;
 
   const handleSubmitProduct = async () => {
@@ -74,13 +78,14 @@ export const AddProductForm = () => {
       productDescription,
       productName,
       productCategoryID,
+      productCategoryName,
       productPrice,
       productUnits,
       productTags,
       vendorName,
       productVendorID,
-      productVendorName,
       productImage,
+      subscriptionTypes,
       dateAdded: nowDate,
     };
 
@@ -107,15 +112,30 @@ export const AddProductForm = () => {
         ...formFields,
         [name]: value,
         productCategoryID: `${category_id}`,
-        productVendorName: `${category_name}`,
+        productCategoryName: `${category_name}`,
       });
+    }
+
+    if (name === "group1") {
+      const all = [...e.target.form].map((option) => {
+        return option.checked ? option.value : "";
+      });
+      return setFormFields({
+        ...formFields,
+        subscriptionTypes: all,
+      });
+
+      // return setFormFields({
+      //   ...formFields,
+      //   [name]: value,
+      //   subscriptionTypes: value,
+      // });
     }
     if (name === "vendorName") {
       if (value === "default") return;
       const { vendor_id } = productVendors.find(
         (vendor) => vendor.vendor_name === value
       );
-      console.log(vendor_id);
       return setFormFields({
         ...formFields,
         [name]: value,
@@ -124,7 +144,6 @@ export const AddProductForm = () => {
     }
     if (name === "productImage") {
       const [files] = e.target.files;
-      console.log(files);
       return setFormFields({
         ...formFields,
         [name]: value,
@@ -141,7 +160,7 @@ export const AddProductForm = () => {
         <Button onClickAction={handleSubmitProduct} name="Create Product" />
       </div>
       <div className="addProductflx">
-        <form encType="multipart/form-data" className="addProductForm">
+        <div encType="multipart/form-data" className="addProductForm">
           <div className="addProductFormBody">
             <div className="addProductLeft">
               <div className="addProductItem">
@@ -161,6 +180,9 @@ export const AddProductForm = () => {
                   name="productCategory"
                   value={productCategory}
                 >
+                  <option key="default" value="default">
+                    Select Category Name
+                  </option>
                   {productCategories?.map((category) => (
                     <option
                       key={category.category_id}
@@ -232,6 +254,38 @@ export const AddProductForm = () => {
                 </select>
               </div>
             </div>
+            <div className="addProductLeft">
+              <label>Subscription Type</label>
+              <Form>
+                <Form.Check
+                  onChange={(e) => handleFormChange(e)}
+                  inline
+                  label="1 month"
+                  name="group1"
+                  value={1}
+                  type="checkbox"
+                  id={`inline-checkbox-1`}
+                />
+                <Form.Check
+                  inline
+                  label="3 months"
+                  onChange={(e) => handleFormChange(e)}
+                  name="group1"
+                  type="checkbox"
+                  id={`inline-checkbox-2`}
+                  value={3}
+                />
+                <Form.Check
+                  inline
+                  onChange={(e) => handleFormChange(e)}
+                  label="6 months"
+                  name="group1"
+                  type="checkbox"
+                  value={6}
+                  id={`inline-checkbox-2`}
+                />
+              </Form>
+            </div>
           </div>
           <div className="addProductUpload">
             <input
@@ -240,7 +294,7 @@ export const AddProductForm = () => {
               name="productImage"
             />
           </div>
-        </form>
+        </div>
       </div>
     </div>
   );

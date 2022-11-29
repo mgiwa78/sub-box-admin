@@ -78,8 +78,10 @@ export const CreateNewProduct = async (productData) => {
   formdata.append(action.key, action.value);
 
   formdata.append("product_category_id", productData.productCategoryID);
+  formdata.append("product_category_name", productData.productCategoryName);
+
   formdata.append("product_vendor_id", productData.productVendorID);
-  formdata.append("product_vendor_name", productData.productVendorName);
+  formdata.append("product_vendor_name", productData.vendorName);
   formdata.append("product_description", productData.productDescription);
   formdata.append("product_price", productData.productPrice);
   formdata.append("product_name", productData.productName);
@@ -87,6 +89,10 @@ export const CreateNewProduct = async (productData) => {
   formdata.append("product_units", productData.productUnits);
   formdata.append("product_tags", productData.productTags);
   formdata.append("product_image", productData.productImage);
+  formdata.append(
+    "subscription_types",
+    productData.subscriptionTypes.join("-")
+  );
   // formdata.append("vendor_id", productData.vendorName);
 
   try {
